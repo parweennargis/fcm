@@ -19,7 +19,7 @@ const app = express();
 
 const router = express.Router();
 
-const routes = require('./src/routers')(app, router);
+const routes = require('./src/routers/accounts.route')(app, router);
 
 app.use(assignId);
 app.use(morgan(':id - :remote-addr - :date[format] :method :url :status :response-time ms :total-time ms'));
